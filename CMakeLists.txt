@@ -1,4 +1,4 @@
-# Copy glew and sdl2 to the build folder and compile from source.
+# Copy glew and SDL2 to the build folder and compile them from source.
 execute_process(COMMAND python build_deps.py
 	WORKING_DIRECTORY ${CMAKE_CURRENT_LIST_DIR})
 

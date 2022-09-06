@@ -20,7 +20,5 @@
 additional development packages.
 
 ## Build instructions:
-* export CC="gcc" or export CC="clang"
-* export CXX="g++" or export CXX="clang++"
 * mkdir build && cd build
 * cmake -DCMAKE_BUILD_TYPE=Release .. && make -j4
