@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2022 Jamal Royce Smith <jamalsmith95.bc@gmail.com>
+ * Copyright (C) 2022 Jamal Royce Smith <smellyjamelly@shaw.ca>
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -46,7 +46,7 @@ static const std::string disclaimer =
     "This is free software, and you are welcome\n"
     "to redistribute it under certain conditions.\n\n"
     "My free and open source projects can be found at \n"
-    "https://gitlab.com/jamalsmith95.bc including \n"
+    "htpps://github.com/jamellysmelly including \n"
     "this one!\n";
 
 // Use core profile version 4.3.0 as a minimum because
