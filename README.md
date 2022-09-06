@@ -24,5 +24,5 @@ program using modern features.
 
 # This software is free and open source!
 * My free and open source projects can be found at 
-https://gitlab.com/jamalsmith95.bc, including 
+https://github.com/jamellysmelly, including 
 this one!
