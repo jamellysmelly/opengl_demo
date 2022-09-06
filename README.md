@@ -20,7 +20,7 @@ program using modern features.
 | Linux            | x86_64          |
 
 ## Screenshots
-![image](/uploads/8a684c1f131057566282b9bfe45b14d8/image.png)
+![image](https://user-images.githubusercontent.com/112916146/188556822-be024fa5-95ff-4cc6-acdf-3ebfff8f22fb.png)
 
 # This software is free and open source!
 * My free and open source projects can be found at 

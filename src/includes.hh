@@ -46,7 +46,7 @@ static const std::string disclaimer =
     "This is free software, and you are welcome\n"
     "to redistribute it under certain conditions.\n\n"
     "My free and open source projects can be found at \n"
-    "htpps://github.com/jamellysmelly including \n"
+    "https://github.com/jamellysmelly including \n"
     "this one!\n";
 
 // Use core profile version 4.3.0 as a minimum because
