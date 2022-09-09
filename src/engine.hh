@@ -38,6 +38,11 @@ class Engine {
     SDL_Window *window = NULL;
     SDL_GLContext gl_context_background = NULL;
 
+    // Controler support.
+    SDL_GameController *pad;
+    SDL_Joystick *joy;
+    int instanceID;
+
     Polygon polygon;
     Camera camera;
     ImGuiHandler imgui_handler;

@@ -80,7 +80,7 @@ Engine::Engine() {
     // Allocate all polygon objects.
     this->polygon = Polygon();
 
-    // Get the current system platform. Linux or Windows.
+    // Get the current system platform.
     // Get current opengl and driver version string.
     this->opengl_version = glGetString(GL_VERSION);
     this->system_platform = SDL_GetPlatform();

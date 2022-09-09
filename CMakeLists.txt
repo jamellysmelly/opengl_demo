@@ -1,7 +1,3 @@
-# Copy glew and SDL2 to the build folder and compile them from source.
-execute_process(COMMAND python build_deps.py
-	WORKING_DIRECTORY ${CMAKE_CURRENT_LIST_DIR})
-
 cmake_minimum_required(VERSION 3.20.2)
 
 # Set the project name.
@@ -39,7 +35,7 @@ if( CMAKE_SYSTEM_NAME STREQUAL "Linux" )
 
   set(CMAKE_CXX_FLAGS "-flto")
 
-  target_link_libraries(demo ${GLEW_LIBRARIES}libGLEW.a)
-  target_link_libraries(demo ${SDL2_LIBRARIES}libSDL2.a)
+  target_link_libraries(demo GLEW)
+  target_link_libraries(demo SDL2)
 
 endif()
