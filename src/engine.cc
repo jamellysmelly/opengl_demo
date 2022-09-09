@@ -140,17 +140,9 @@ void Engine::poll_events() {
 }
 
 void Engine::update_engine() {
-
-    // Cap frame rate for Linux.
-#ifdef __linux__
-    // std::this_thread::sleep_for(1ms);
-
-    // Don't Cap frame rate for Windows.
-#elif _WIN32
-    // std::this_thread::sleep_for(1ms);
-#else
-
-#endif
+    
+    // Cap Frame rate.
+    std::this_thread::sleep_for(1ms);
 
     // Update window size variables.
     SDL_GL_GetDrawableSize(this->window, &this->win_w, &this->win_h);

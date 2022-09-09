@@ -1,8 +1,6 @@
-
 cmake_minimum_required(VERSION 3.20.2)
-# Set the project name.
-project(demo VERSION 0.0.3)
 
+project(demo VERSION 0.0.3)
 
 find_package(OpenGL REQUIRED)
 include_directories (${OPENGL_INCLUDE_DIR})
@@ -13,8 +11,7 @@ include_directories(${GLEW_INCLUDE_DIRS})
 find_package(SDL2 REQUIRED)
 include_directories(demo ${SDL2_INCLUDE_DIRS})
 
-
-set(CMAKE_CXX_FLAGS "-pipe -std=c++20 -Wall -Wextra")
+set(CMAKE_CXX_FLAGS "-pipe -std=c++20 -Wall -Wextra -flto")
 
 # Add the executable.
 add_executable(demo src/main.cc
@@ -30,13 +27,5 @@ add_executable(demo src/main.cc
     	deps/imgui/imgui_impl_sdl.cpp
     	deps/imgui/imgui_impl_opengl3.cpp)
 
-target_link_libraries(demo ${OPENGL_LIBRARIES} pthread)
+target_link_libraries(demo ${OPENGL_LIBRARIES} GLEW SDL2 pthread)
 
-if( CMAKE_SYSTEM_NAME STREQUAL "Linux" )
-
-  set(CMAKE_CXX_FLAGS "-flto")
-
-  target_link_libraries(demo GLEW)
-  target_link_libraries(demo SDL2)
-
-endif()
