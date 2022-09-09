@@ -1,17 +1,18 @@
-cmake_minimum_required(VERSION 3.20.2)
 
+cmake_minimum_required(VERSION 3.20.2)
 # Set the project name.
 project(demo VERSION 0.0.3)
 
-set(GLEW_LIBRARIES 
-	${CMAKE_SOURCE_DIR}/build/glew/lib/)
-set(SDL2_LIBRARIES ${CMAKE_SOURCE_DIR}/build/SDL2/build/)
 
-set(GLEW_BIN_DIR
-	${CMAKE_SOURCE_DIR}/build/glew/bin/)
-	
 find_package(OpenGL REQUIRED)
 include_directories (${OPENGL_INCLUDE_DIR})
+
+find_package(GLEW REQUIRED)
+include_directories(${GLEW_INCLUDE_DIRS})
+
+find_package(SDL2 REQUIRED)
+include_directories(demo ${SDL2_INCLUDE_DIRS})
+
 
 set(CMAKE_CXX_FLAGS "-pipe -std=c++20 -Wall -Wextra")
 
