@@ -22,7 +22,7 @@
 
 #include "../deps/imgui/imgui.h"
 #include "../deps/imgui/imgui_impl_opengl3.h"
-#include "../deps/imgui/imgui_impl_sdl.h"
+#include "../deps/imgui/imgui_impl_sdl2.h"
 
 #include "../deps/glm/glm/gtc/matrix_transform.hpp"
 #include "../deps/glm/glm/gtc/type_ptr.hpp" // glm::value_ptr
@@ -36,8 +36,8 @@ using namespace std::literals::chrono_literals; // ms
 #include <memory>                               // std::unique_ptr
 #include <thread>                               // std::this_thread::sleep_for
 
-// demo v0.0.2
-static const std::string demo_version = "OpenGL Demo v0.0.3";
+// demo v0.0.4 Apr 25th 2023
+static const std::string demo_version = "OpenGL Demo v0.0.4";
 
 // Disclaimer.
 static const std::string disclaimer =

@@ -34,9 +34,9 @@ ImGuiHandler::ImGuiHandler(Engine *engine) {
     ImGui_ImplOpenGL3_Init(glsl_version_string.c_str());
 
     // Setup keyboard support.
-    ImGuiIO& io = ImGui::GetIO(); (void)io;
-    io.ConfigFlags |= ImGuiConfigFlags_NavEnableKeyboard;
-    io.ConfigFlags |= ImGuiConfigFlags_NavEnableGamepad;
+    //ImGuiIO& io = ImGui::GetIO(); (void)io;
+    //io.ConfigFlags |= ImGuiConfigFlags_NavEnableKeyboard;
+    //io.ConfigFlags |= ImGuiConfigFlags_NavEnableGamepad;
 }
 
 void ImGuiHandler::present_close_game_popup(Engine *engine) {
