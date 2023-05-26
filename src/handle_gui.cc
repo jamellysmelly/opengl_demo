@@ -134,8 +134,8 @@ void ImGuiHandler::present_camera_window(Engine *engine) {
     }
 
     ImGui::Text("Current rotation angle in radians.");
-    ImGui::SliderFloat("", &engine->camera.current_rotate_angle,
-                       rotate_angle_min, rotate_angle_max);
+    // ImGui::SliderFloat("", &engine->camera.current_rotate_angle,
+    //                   rotate_angle_min, rotate_angle_max);
 
     // Convert radians to degrees.
     ImGui::Text("degrees: %f",
@@ -143,9 +143,9 @@ void ImGuiHandler::present_camera_window(Engine *engine) {
 
     // Sliders for curret camera position.
     ImGui::Text("Current position.");
-    ImGui::SliderFloat("x", &engine->camera.current_trans_vec.x, -4.3f, 4.3f);
-    ImGui::SliderFloat("y", &engine->camera.current_trans_vec.y, -2.0f, 2.0f);
-    ImGui::SliderFloat("z", &engine->camera.current_trans_vec.z, -6.0f, 0.0f);
+    // ImGui::SliderFloat("x", &engine->camera.current_trans_vec.x, -4.3f, 4.3f);
+    // ImGui::SliderFloat("y", &engine->camera.current_trans_vec.y, -2.0f, 2.0f);
+    // ImGui::SliderFloat("z", &engine->camera.current_trans_vec.z, -6.0f, 0.0f);
 
     // Click button to reset camera position.
     if (ImGui::Button("Reset position")) {
