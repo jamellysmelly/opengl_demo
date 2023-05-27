@@ -4,19 +4,18 @@ execute_process(COMMAND python build_deps.py
 
 cmake_minimum_required(VERSION 3.20.2)
 
-project(demo VERSION 0.0.4)
+# Set the project name.
+project(demo VERSION 0.0.3)
 
 set(GLEW_LIBRARIES 
 	${CMAKE_SOURCE_DIR}/build/glew/build/cmake/build/lib/)
+set(SDL2_LIBRARIES ${CMAKE_SOURCE_DIR}/build/SDL2/build/)
 
 set(GLEW_BIN_DIR
 	${CMAKE_SOURCE_DIR}/build/glew/build/cmake/build/bin/)
 
 find_package(OpenGL REQUIRED)
 include_directories (${OPENGL_INCLUDE_DIR})
-
-find_package(SDL2 REQUIRED)
-include_directories(demo ${SDL2_INCLUDE_DIRS})
 
 set(CMAKE_CXX_FLAGS "-pipe -std=c++20 -Wall -Wextra")
 
@@ -34,6 +33,7 @@ add_executable(demo src/main.cc
     	deps/imgui/imgui_impl_sdl2.cpp
     	deps/imgui/imgui_impl_opengl3.cpp)
 
+target_link_libraries(demo ${OPENGL_LIBRARIES} pthread)
 
 if( CMAKE_SYSTEM_NAME STREQUAL "Windows")
 
@@ -43,8 +43,18 @@ if( CMAKE_SYSTEM_NAME STREQUAL "Windows")
 	${GLEW_LIBRARIES}libglew32.dll.a
   	${GLEW_LIBRARIES}libglew32.a)
 
+  target_link_libraries(demo
+	${SDL2_LIBRARIES}libSDL2main.a
+  	${SDL2_LIBRARIES}libSDL2.dll.a
+  	${SDL2_LIBRARIES}libSDL2.a)
+
 # Copy over .dll files to build folder.
- 	add_custom_command(
+  add_custom_command(
+	TARGET demo POST_BUILD
+	COMMAND ${CMAKE_COMMAND} -E copy
+	${SDL2_LIBRARIES}/SDL2.dll
+	${CMAKE_CURRENT_BINARY_DIR}/SDL2.dll) 
+  add_custom_command(
 	TARGET demo POST_BUILD
 	COMMAND ${CMAKE_COMMAND} -E copy
 	${GLEW_BIN_DIR}/glew32.dll
@@ -52,10 +62,9 @@ if( CMAKE_SYSTEM_NAME STREQUAL "Windows")
 
 elseif( CMAKE_SYSTEM_NAME STREQUAL "Linux" )
 
+  set(CMAKE_CXX_FLAGS "-flto")
+
   target_link_libraries(demo ${GLEW_LIBRARIES}libGLEW.a)
+  target_link_libraries(demo ${SDL2_LIBRARIES}libSDL2.a)
 
 endif()
-
-
-target_link_libraries(demo ${OPENGL_LIBRARIES} SDL2)
-

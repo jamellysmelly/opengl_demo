@@ -17,10 +17,13 @@ import os
 
 main_dir = os.getcwd()
 glew_build_dir = "build/glew/build/cmake/build/"
+sdl2_build_dir = "build/SDL2/build/"
 glew_done = "GLEW is already built."
+sdl2_done = "SDL2 is already built."
 
 def build_linux_deps():
     linux_copy_glew = "cp -ar deps/glew build/glew"
+    linux_copy_sdl2 = "cp -ar deps/SDL2 build/SDL2"
 
     cmake_command = "cmake -S ../ -B ./ -DCMAKE_BUILD_TYPE=Release"
     make_command = "make -j{}".format(os.cpu_count())
@@ -42,8 +45,28 @@ def build_linux_deps():
     else:
         print(glew_done)
 
+    ## Change back to the main folder. 
+    os.chdir(main_dir)
+    if os.path.isdir(sdl2_build_dir) == False:
+        try:
+            ## Copy SDL2 to build.
+            os.system(linux_copy_sdl2)
+
+            ## Create and change directoy to SDL2/build
+            os.mkdir(sdl2_build_dir)
+            os.chdir(sdl2_build_dir)
+
+            ## Run the cmake build script and build it with the makefile output
+            os.system(cmake_command)
+            os.system(make_command)
+        except Exception as e: 
+            print(repr(e))
+    else:
+        print(sdl2_done)
+
 def build_windows_deps():
     windows_copy_glew = "Xcopy /E /I deps\glew build\glew"
+    windows_copy_sdl2 = "Xcopy /E /I deps\SDL2 build\SDL2"
 
     ##cmake_command = "cmake -S ../ -B ./ -G \"MinGW Makefiles\" -DCMAKE_BUILD_TYPE=Release"
     ## mingw32_make_cmd = "mingw32-make.exe -j{}".format(os.cpu_count())
@@ -66,6 +89,25 @@ def build_windows_deps():
             print(repr(e))
     else:
         print(glew_done)
+
+    ## Change back to the main folder.
+    os.chdir(main_dir)
+    if os.path.isdir(sdl2_build_dir) == False:
+        try:
+            ## Copy SDL2 to build.
+            os.system(windows_copy_sdl2)
+
+            ## Make and change directoy to SDL2/build
+            os.mkdir(sdl2_build_dir)
+            os.chdir(sdl2_build_dir)
+
+            ## Run the cmake build script and build it with the msbuild output.
+            os.system(cmake_command)
+            os.system(mingw32_make_cmd)
+        except Exception as e: 
+            print(repr(e))
+    else:
+        print(sdl2_done)
 
 def main():
     print("Python version: " + (sys.version))
