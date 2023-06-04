@@ -1,5 +1,5 @@
 # Copy glew and sdl2 to the build folder and compile from source.
-execute_process(COMMAND python build_deps.py
+execute_process(COMMAND python deps/build_deps.py
 	WORKING_DIRECTORY ${CMAKE_CURRENT_LIST_DIR})
 
 cmake_minimum_required(VERSION 3.20.2)

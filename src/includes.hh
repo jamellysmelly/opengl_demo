@@ -15,10 +15,10 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-#include <GL/glew.h> // Include before OpenGL.
+#include "../deps/glew/include/GL/glew.h" // Include before OpenGL.
 
-#include <SDL2/SDL.h>
-#include <SDL2/SDL_opengl.h>
+#include "../deps/SDL2/include/SDL.h"
+#include "../deps/SDL2/include/SDL_opengl.h"
 
 #include "../deps/imgui/imgui.h"
 #include "../deps/imgui/imgui_impl_opengl3.h"
