@@ -1,0 +1,1 @@
+/usr/bin/cc -O3 -DNDEBUG -rdynamic CMakeFiles/visualinfo.dir/home/jamalrs/Hacking/opengl_demo/build/glew/src/visualinfo.c.o -o bin/visualinfo  -Wl,-rpath,/home/jamalrs/Hacking/opengl_demo/build/glew/build/cmake/build/lib: lib/libGLEW.so.2.2.0 -lX11 -lXext -lGL -lGLU -lX11 -lXext 

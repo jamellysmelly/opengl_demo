@@ -1,0 +1,11 @@
+/home/jamalrs/Hacking/opengl_demo/build/glew/build/cmake/build/CMakeFiles/glew.dir
+/home/jamalrs/Hacking/opengl_demo/build/glew/build/cmake/build/CMakeFiles/glew_s.dir
+/home/jamalrs/Hacking/opengl_demo/build/glew/build/cmake/build/CMakeFiles/glewinfo.dir
+/home/jamalrs/Hacking/opengl_demo/build/glew/build/cmake/build/CMakeFiles/visualinfo.dir
+/home/jamalrs/Hacking/opengl_demo/build/glew/build/cmake/build/CMakeFiles/uninstall.dir
+/home/jamalrs/Hacking/opengl_demo/build/glew/build/cmake/build/CMakeFiles/edit_cache.dir
+/home/jamalrs/Hacking/opengl_demo/build/glew/build/cmake/build/CMakeFiles/rebuild_cache.dir
+/home/jamalrs/Hacking/opengl_demo/build/glew/build/cmake/build/CMakeFiles/list_install_components.dir
+/home/jamalrs/Hacking/opengl_demo/build/glew/build/cmake/build/CMakeFiles/install.dir
+/home/jamalrs/Hacking/opengl_demo/build/glew/build/cmake/build/CMakeFiles/install/local.dir
+/home/jamalrs/Hacking/opengl_demo/build/glew/build/cmake/build/CMakeFiles/install/strip.dir
