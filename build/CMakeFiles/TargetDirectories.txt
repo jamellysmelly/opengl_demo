@@ -1,3 +1,0 @@
-/home/jamalrs/Hacking/opengl_demo/build/CMakeFiles/demo.dir
-/home/jamalrs/Hacking/opengl_demo/build/CMakeFiles/edit_cache.dir
-/home/jamalrs/Hacking/opengl_demo/build/CMakeFiles/rebuild_cache.dir
