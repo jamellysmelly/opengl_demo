@@ -1,4 +1,4 @@
-# An OpenGL demo project for Linux written in modern C/C++.
+# A cross platform OpenGL demo project for Linux and Windows written in modern C/C++.
 
 ## Description:
 * Opens a window with an OpenGL rendering context. Then presents a polygon 
@@ -18,6 +18,7 @@ program using modern features.
 | Operating System | Architecture(s) |
 | -----------      | -----------     |
 | Linux            | x86_64          |
+| Windows          | x86_64          |
 
 ## Screenshots
 ![image](https://user-images.githubusercontent.com/112916146/188556822-be024fa5-95ff-4cc6-acdf-3ebfff8f22fb.png)
