@@ -37,7 +37,7 @@ using namespace std::literals::chrono_literals; // ms
 #include <thread>                               // std::this_thread::sleep_for
 
 // demo v0.0.4 Apr 25th 2023
-static const std::string demo_version = "OpenGL Demo v0.0.4";
+static const std::string demo_version = "OpenGL Demo v0.0.5";
 
 // Disclaimer.
 static const std::string disclaimer =

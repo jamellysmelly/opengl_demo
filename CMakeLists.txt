@@ -5,7 +5,7 @@ execute_process(COMMAND python deps/build_deps.py
 cmake_minimum_required(VERSION 3.20.2)
 
 # Set the project name.
-project(demo VERSION 0.0.3)
+project(demo VERSION 0.0.5)
 
 set(GLEW_LIBRARIES 
 	${CMAKE_SOURCE_DIR}/build/glew/build/cmake/build/lib/)
