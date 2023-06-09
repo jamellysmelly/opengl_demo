@@ -22,7 +22,7 @@ program using modern tools/features.
 | Windows          | x86_64          |
 
 ## Screenshots
-![image](https://github.com/jamellysmelly/opengl_demo/assets/112916146/2de8eb85-6a76-4e27-bb80-2a2fffbd0244)
+![image](https://github.com/jamellysmelly/opengl_demo/assets/112916146/e4746ba1-e552-4a47-a18f-39f5be4f8746)
 
 # This software is free and open source!
 * My free and open source projects can be found at 
