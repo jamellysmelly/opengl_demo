@@ -32,9 +32,6 @@ additional development packages.
 for Windows) from (https://scoop.sh/.) 
 * Then you can use scoop to install __mingw-winlibs-llvm-ucrt__, 
  __cmake__, and __python__ to aquire all above mentioned dependencies.
-*
-* __Please note__, this project only supports compiling via MinGW-W64 on Windows
-at this time.
 
 ## Linux build instructions:
 * export CC="gcc" or export CC="clang"

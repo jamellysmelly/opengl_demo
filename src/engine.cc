@@ -19,7 +19,7 @@
 
 Engine::Engine() {
 
-    std::cout << "Initializing...\n" << std::endl;
+    std::cout << "Initializing Engine...\n" << std::endl;
 
     // Init SDL and create window.
     if (SDL_Init(SDL_INIT_VIDEO | SDL_INIT_GAMECONTROLLER) != 0) {
@@ -34,7 +34,7 @@ Engine::Engine() {
         throw std::runtime_error(SDL_GetError());
     }
 
-    // Set current core profile, version and swap interval
+    // Set current gl core profile, version and swap interval
     SDL_GL_SetAttribute(SDL_GL_CONTEXT_PROFILE_MASK,
                         SDL_GL_CONTEXT_PROFILE_CORE);
     SDL_GL_SetAttribute(SDL_GL_CONTEXT_MAJOR_VERSION, OPENGL_MAJOR_VERSION);
@@ -48,7 +48,7 @@ Engine::Engine() {
         throw std::runtime_error(SDL_GetError());
     }
 
-    // set context to window
+    // set gl context to the created window
     SDL_GL_MakeCurrent(this->window, this->gl_context_background);
 
     // Initialize glew context
@@ -144,7 +144,7 @@ void Engine::update_engine() {
     // Cap Frame rate.
     std::this_thread::sleep_for(1ms);
 
-    // Update window size variables.
+    // Update window when resized.
     SDL_GL_GetDrawableSize(this->window, &this->win_w, &this->win_h);
 
     // Set the viewport to the current window size.

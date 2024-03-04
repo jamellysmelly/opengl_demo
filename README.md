@@ -1,4 +1,4 @@
-# A cross platform OpenGL demo for Linux and Windows written in C/C++.
+# A cross platform OpenGL demo.
 
 ## Description:
 * Opens a window with an OpenGL rendering context, presents a 3D rendered

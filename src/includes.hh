@@ -24,11 +24,11 @@
 #include "../deps/imgui/imgui_impl_opengl3.h"
 #include "../deps/imgui/imgui_impl_sdl2.h"
 
-#include "../deps/glm/glm/gtc/matrix_transform.hpp"
-#include "../deps/glm/glm/gtc/type_ptr.hpp" // glm::value_ptr
-#include "../deps/glm/glm/mat4x4.hpp"       // glm::mat4
-#include "../deps/glm/glm/vec3.hpp"         // glm::vec3
-#include "../deps/glm/glm/vec4.hpp"         // glm::vec4, glm::ivec4
+#include "../deps/glm/gtc/matrix_transform.hpp"
+#include "../deps/glm/gtc/type_ptr.hpp" // glm::value_ptr
+#include "../deps/glm/mat4x4.hpp"       // glm::mat4
+#include "../deps/glm/vec3.hpp"         // glm::vec3
+#include "../deps/glm/vec4.hpp"         // glm::vec4, glm::ivec4
 
 #include <chrono>                               // std::steady_clock
 using namespace std::literals::chrono_literals; // ms
@@ -36,8 +36,8 @@ using namespace std::literals::chrono_literals; // ms
 #include <memory>                               // std::unique_ptr
 #include <thread>                               // std::this_thread::sleep_for
 
-// demo v0.0.4 Apr 25th 2023
-static const std::string demo_version = "OpenGL Demo v0.0.5";
+// demo v0.0.6 Feb 23rd 2024
+static const std::string demo_version = "OpenGL Demo v0.0.6";
 
 // Disclaimer.
 static const std::string disclaimer =

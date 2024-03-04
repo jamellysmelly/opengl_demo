@@ -48,8 +48,10 @@ int main(int argc, char *args[]) {
 
         // Print all uncaught exceptions to help with debuging.
     } catch (std::exception &e) {
+	    
         std::cout << "Exception caught: " << e.what() << std::endl;
-        return -1;
+
+	return -1;
     }
     return 0;
 }
