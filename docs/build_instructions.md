@@ -1,11 +1,11 @@
 ### Dropped in external build dependencies:
 * GLEW v2.2.0 (Provided via modified source in deps/glew.) 
 (https://github.com/nigels-com/glew/)
-* SDL2 v2.26.0 (Provided via modified source in deps/SDL2.) 
+* SDL2 v2.30.0 (Provided via modified source in deps/SDL2.) 
 ( https://github.com/libsdl-org/SDL/)
-* GLM v0.9.9.8 (Provided via modified source in deps/glm/.) 
+* GLM v1.0.1 (Provided via modified source in deps/glm/.) 
 ( https://github.com/g-truc/glm/)
-* Dear ImGui v1.88 (Provided via modified source in deps/imgui/.) 
+* Dear ImGui v1.90.5 (Provided via modified source in deps/imgui/.) 
 ( https://github.com/ocornut/imgui/)
 
 ## Make sure to install the following dependencies.
